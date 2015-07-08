@@ -18,6 +18,8 @@ module Middleman
 
         self.aws_access_key_id ||= ENV['AWS_ACCESS_KEY_ID']
         self.aws_secret_access_key ||= ENV['AWS_SECRET_ACCESS_KEY']
+        self.region ||= ENV['AWS_DEFAULT_REGION']
+
         self.bucket ||= ENV['BUCKET']
       end
 
