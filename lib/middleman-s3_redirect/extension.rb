@@ -99,6 +99,7 @@ module Middleman
             :public => true,
             :acl => 'public-read',
             :body => '',
+            'cache-control' => 'public, max-age=86400', # 1 day, should make this customizable
             'x-amz-website-redirect-location' => "#{redirect.to}"
           })
         end
