@@ -1,9 +1,7 @@
 require 'middleman-core'
-require 'fog'
-require 'middleman-s3_redirect/version'
 require 'middleman-s3_redirect/commands'
 
-::Middleman::Extensions.register(:s3_redirect, '>= 3.0.0') do
+::Middleman::Extensions.register(:s3_redirect) do
   require 'middleman-s3_redirect/extension'
-  ::Middleman::S3Redirect
+  ::Middleman::S3Redirect::Extension
 end

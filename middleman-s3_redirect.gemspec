@@ -1,11 +1,10 @@
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'middleman-s3_redirect/version'
 
 Gem::Specification.new do |gem|
   gem.name          = "middleman-s3_redirect"
-  gem.version       = Middleman::S3Redirect::VERSION
+  gem.version       = "4.0.0"
   gem.authors       = ["Frederic Jean", "Junya Ogura"]
   gem.email         = ["fred@fredjean.net"]
   gem.description   = %q{Generates redirects via S3 API.}
