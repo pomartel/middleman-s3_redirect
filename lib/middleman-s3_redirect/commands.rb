@@ -1,6 +1,6 @@
 require 'middleman-core/cli'
 require 'middleman-s3_redirect/extension'
-require 'fog'
+require 'fog/aws'
 
 module Middleman
   module Cli
@@ -66,8 +66,7 @@ module Middleman
       end
 
       def connection
-        @connection ||= Fog::Storage.new({
-          :provider => 'AWS',
+        @connection ||= Fog::AWS::Storage.new({
           :aws_access_key_id => options.aws_access_key_id,
           :aws_secret_access_key => options.aws_secret_access_key,
           :region => options.region,
